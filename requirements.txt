@@ -1,0 +1,5 @@
+pandas>=2.0
+numpy>=1.26
+statsmodels>=0.14
+yfinance>=0.2
+akshare>=1.18
