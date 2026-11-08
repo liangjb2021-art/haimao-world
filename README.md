@@ -3,7 +3,7 @@
 用**预注册杀死条件 + HAC 检验 + 安慰剂对照**，复现教科书级的市场异象。
 描述性数字再好看，也要服从预设的检验——这正是本工具箱与“回测作坊”的区别。
 
-## 已复现的 6 个案例
+## 已复现的 7 个案例
 
 | # | 案例 | 市场 | 样本 | 结论 | 研报 |
 |---|------|------|------|------|------|
@@ -13,8 +13,9 @@
 | 04 | 美股暴跌日，黄金避险吗 | SPY vs GLD | 2004—2026 | 被杀死：暴跌日黄金平均还跌 | [posts/45](https://haimao.app/posts/45) |
 | 05 | VIX 飙升后 SPY 次日反弹吗 | SPY vs VIX | 1993—2026 | 活下来，但 p=0.034 在边缘，且反弹在盘中 | [posts/51](https://haimao.app/posts/51) |
 | 06 | 沪深 300ETF 大涨大跌后下周反转吗 | 510300.SS | 2012—2026 | 被杀死：双向同时触发杀死条件，次日/换阈值/分时段均无反转 | [posts/57](https://haimao.app/posts/57) |
+| 07 | 美债收益率飙升 20bp 后纳指跌得比大盘多吗 | ^TNX vs QQQ/SPY | 1999—2026 | 被杀死：飙升日纳指反而跑赢 0.64%，K1 触发 | [posts/63](https://haimao.app/posts/63) |
 
-6 个假设，2 个活下来，4 个被杀死——框架没有被调成只产出阳性结果。
+7 个假设，2 个活下来，5 个被杀死——框架没有被调成只产出阳性结果。
 
 ## 快速开始
 
@@ -29,6 +30,7 @@ python examples/03_hsi_monday.py
 python examples/04_gold_hedge_crash.py
 python examples/05_vix_spike_rebound.py
 python examples/06_csi300_extreme_days_reversal.py
+python examples/07_tnx_spike_qqq_spread.py
 ```
 
 每个案例都是独立脚本：下载数据（yfinance / akshare）、按事前定义构造事件、
